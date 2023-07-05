@@ -7,9 +7,9 @@ public class SquareEquation
         double[] answer = new double[0];
         double x1;
         double x2;
-        double eps = Math.Pow(10, -9);
+        double eps = 1e-7;
 
-        if (Double.IsPositiveInfinity(a) || Double.IsNegativeInfinity(a) || Math.Abs(a) < eps || Double.IsNaN(a))
+        if (Double.IsPositiveInfinity(a) || Double.IsNegativeInfinity(a) || Math.Abs(a) <= eps || Double.IsNaN(a))
         {
             throw new System.ArgumentException();
         }
