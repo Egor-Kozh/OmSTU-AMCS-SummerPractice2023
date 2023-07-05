@@ -32,15 +32,28 @@ public class SquareEquation
 
             answer[0] = x1;                  
         }
-        if(D >= eps)
+        if (D >= eps)
         {
-            answer = new double[2];
-            
-            x1 = -(b + Math.Sign(b) * Math.Sqrt(D)) / 2 + 0;
-            x2 = c / x1;
+            if(b > 1)
+            {
+                answer = new double[2];
 
-            answer[0] = x1;
-            answer[1] = x2;
+                x1 = -(b + Math.Sign(b) * Math.Sqrt(D)) / 2;
+                x2 = c / x1;
+
+                answer[0] = x1;
+                answer[1] = x2;
+            }
+            if(b == 0)
+            {
+                answer = new double[2];
+
+                x1 = Math.Sqrt(-c);
+                x2 = -Math.Sqrt(-c);
+
+                answer[0] = x1;
+                answer[1] = x2;
+            }
         }
 
         return answer;
