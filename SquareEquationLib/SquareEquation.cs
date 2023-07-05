@@ -28,28 +28,28 @@ public class SquareEquation
         {
             answer = new double[1];
 
-            x1 = c/(-b / 2);;
+            x1 = (-b / 2)/a;;
 
             answer[0] = x1;                  
         }
         if (D >= eps)
         {
-            if(b > 1)
+            if(b != 0)
             {
                 answer = new double[2];
 
                 x1 = -(b + Math.Sign(b) * Math.Sqrt(D)) / 2;
                 x2 = c / x1;
 
-                answer[0] = x1;
+                answer[0] = x1/a;
                 answer[1] = x2;
             }
-            if(b == 0)
+            else
             {
                 answer = new double[2];
 
-                x1 = Math.Sqrt(-c/a);
-                x2 = -Math.Sqrt(-c/a);
+                x1 = -Math.Sqrt(-c/a);
+                x2 = Math.Sqrt(-c/a);
 
                 answer[0] = x1;
                 answer[1] = x2;
