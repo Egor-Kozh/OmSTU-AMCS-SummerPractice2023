@@ -28,7 +28,7 @@ public class SquareEquation
         {
             answer = new double[1];
 
-            x1 = (-b) / 2 ;
+            x1 = c/(-b / 2);;
 
             answer[0] = x1;                  
         }
