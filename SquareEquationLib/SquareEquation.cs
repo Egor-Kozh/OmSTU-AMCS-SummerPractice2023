@@ -48,8 +48,8 @@ public class SquareEquation
             {
                 answer = new double[2];
 
-                x1 = -Math.Sqrt(-c/a);
-                x2 = Math.Sqrt(-c/a);
+                x1 = Math.Sqrt(-c/a);
+                x2 = -Math.Sqrt(-c/a);
 
                 answer[0] = x1;
                 answer[1] = x2;
