@@ -1,5 +1,4 @@
 using System;
-using spacebattle;
 using TechTalk.SpecFlow;
 
 namespace spacebattletest;
